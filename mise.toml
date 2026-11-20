@@ -1,0 +1,24 @@
+[tools]
+dotnet = "11.0.100"
+
+[tasks.build]
+description = "Build the Zed extension"
+run = "python3 install.py --build-only"
+
+[tasks.install]
+description = "Build and install the local Zed dev extension"
+run = "python3 install.py"
+
+[tasks.test]
+description = "Run regression tests with real CSharpier"
+run = [
+  "dotnet tool restore --tool-manifest tests/fixtures/project/dotnet-tools.json",
+  "python3 -m unittest discover -s tests -v",
+]
+
+[tasks.benchmark]
+description = "Benchmark stdio LSP round trips and the previous external formatter"
+run = [
+  "dotnet tool restore --tool-manifest tests/fixtures/project/dotnet-tools.json",
+  "python3 tests/benchmark.py --output benchmark-results.json",
+]

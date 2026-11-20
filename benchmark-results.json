@@ -1,0 +1,37 @@
+{
+  "platform": "Linux x86_64",
+  "python": "3.14.8",
+  "source_bytes": 775,
+  "measurement": "stdio LSP round trip including JSON, IPC, config checks and edits; excludes Zed UI rendering",
+  "cold_first_save_ms": 431.694,
+  "changed_buffer_warm_worker": {
+    "samples": 100,
+    "median_ms": 3.335,
+    "p95_ms": 6.752,
+    "max_ms": 11.704
+  },
+  "unchanged_buffer_cached": {
+    "samples": 100,
+    "median_ms": 1.066,
+    "p95_ms": 2.118,
+    "max_ms": 2.836
+  },
+  "changed_xml_warm_worker": {
+    "samples": 100,
+    "median_ms": 2.6,
+    "p95_ms": 4.183,
+    "max_ms": 5.325
+  },
+  "save_after_150ms_typing_pause": {
+    "samples": 15,
+    "median_ms": 1.437,
+    "p95_ms": 2.292,
+    "max_ms": 2.292
+  },
+  "previous_external_formatter": {
+    "samples": 5,
+    "median_ms": 498.802,
+    "p95_ms": 511.269,
+    "max_ms": 511.269
+  }
+}

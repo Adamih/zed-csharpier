@@ -1,0 +1,15 @@
+id = "csharpier"
+name = "CSharpier"
+version = "0.1.0"
+schema_version = 1
+authors = ["Adamih"]
+repository = "https://github.com/Adamih/zed-csharpier"
+description = "Fast, persistent CSharpier formatting for C# and .NET project files."
+
+[lib]
+kind = "Rust"
+version = "0.7.0"
+
+[language_servers.csharpier]
+name = "CSharpier"
+languages = ["CSharp", "C# Project File", "MSBuild File", "C# Solution File"]
